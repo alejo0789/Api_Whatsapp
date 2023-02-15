@@ -1,5 +1,5 @@
 const https= require ("https");
-
+require('dotenv').config();
 
 
 
@@ -12,8 +12,8 @@ async function sendMessageWhatsapp(data) {
         body: data,
         headers: {
           "Content-Type": "application/json",
-          Authorization:
-            "Bearer EAAJYO0zVZB9IBAMwOhKQ56kvZAz2Rw30zvENtpG4j1F6TuWQ3atPWU8BXaZA1ZC6Y5mo1XUolZCjvl5Jo3NoYJfrNlLWTOPBoikJ5YMcknFv69DtfZAZCIAm1vBXsy2HbpKnRxM9dPGdfwXoQzcHRw5Aca4hsxWON22yBgkvIYOZAI9CQVR59tQX",
+          Authorization: process.env.TOKEN_KEY,
+           
         },
       };
   

@@ -10,4 +10,4 @@ app.use(express.json())
 app.use("/whatsapp", apiRouter)
 
 
-app.listen(PORT, ()=> {console.log("el purto es :" +PORT)})
+app.listen(PORT, ()=> {console.log("el puerto es :" +PORT)})
