@@ -19,7 +19,7 @@ return data
 }
 
 function  messageList(number){
-saludo=personalmessages.saludoControlGastos
+const saludo=personalmessages.saludoControlGastos();
     const data = JSON.stringify(
         {
             "messaging_product": "whatsapp",    
