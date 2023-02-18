@@ -12,12 +12,20 @@ async function processMessage(text, number){
 
     var models=[]
     my_console.log('entra gpt 1'+text)
-    if(text.includes("hola")){
-        var model =whatsappModel.messageList(number)
+
+    const saludos = ["hola", "buenos días", "buenas tardes", "buenas noches", "hey", "¿cómo estás?", "qué tal", "saludos", "hi"];
+    if (saludos.some(saludo => text.includes(saludo))) {
+      var model =whatsappModel.messageList(number)
       
        
         models.push(model)
     }
+    /*if(text.includes("hola")){
+        var model =whatsappModel.messageList(number)
+      
+       
+        models.push(model)
+    }*/
     
 
     else if(text.includes("ahorro")){
