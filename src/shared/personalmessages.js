@@ -29,10 +29,10 @@ function saludoControlGastos() {
     ];
   
     // Genera un número aleatorio entre 0 y la longitud del array de mensajes de despedida
-    const randomIndex = Math.floor(Math.random() * goodbyeMessages.length);
+    const goodbyeMessage = goodbyeMessages[Math.floor(Math.random() * goodbyeMessages.length)];
   
     // Devuelve el mensaje de despedida aleatorio correspondiente al índice generado
-    return goodbyeMessages[randomIndex];
+    return goodbyeMessage;
   }
   
 

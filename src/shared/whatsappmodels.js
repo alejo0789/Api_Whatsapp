@@ -46,7 +46,7 @@ function  messagebye(number){
                 "type": "text",
                 "text": {
                     
-                    "body": saludo
+                    "body": despedida
                 }
             }
         )
