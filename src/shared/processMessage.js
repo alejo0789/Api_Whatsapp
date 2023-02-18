@@ -20,6 +20,20 @@ async function processMessage(text, number){
        
         models.push(model)
     }
+
+
+
+    const despedidas = ["adiós","adiós", "hasta luego", "hasta pronto", "nos vemos", "chao", "ciao", "bye", "que tengas un buen día"];
+    
+    if (despedidas.some(despedida => text.includes(despedida))) {
+      var model =whatsappModel.messagebye(number)
+      
+       
+      models.push(model)
+  }
+    
+    
+    
     /*if(text.includes("hola")){
         var model =whatsappModel.messageList(number)
       

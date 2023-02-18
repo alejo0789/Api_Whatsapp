@@ -15,4 +15,28 @@ function saludoControlGastos() {
   
     return saludo;
   }
-  module.exports={saludoControlGastos}
+
+  function generateGoodbyeMessage() {
+    const goodbyeMessages = [
+      "¡Gracias por utilizar nuestro servicio de control de gastos! ¡Nos vemos pronto!",
+      "¡Espero que te haya sido útil nuestro servicio! ¡Hasta la próxima!",
+      "¡No olvides seguir controlando tus gastos! ¡Hasta luego!",
+      "¡Fue un placer ayudarte a mantener tus finanzas en orden! ¡Adiós!",
+      "¡No dudes en contactarnos si necesitas ayuda adicional con tus gastos! ¡Hasta pronto!",
+      "¡Recuerda que cada pequeño ahorro cuenta! ¡Vuelve pronto!",
+      "¡Que tengas un buen día y no te olvides de ahorrar! ¡Hasta la próxima!",
+      "¡Gracias por confiar en nosotros para ayudarte a controlar tus gastos! ¡Adiós!"
+    ];
+  
+    // Genera un número aleatorio entre 0 y la longitud del array de mensajes de despedida
+    const randomIndex = Math.floor(Math.random() * goodbyeMessages.length);
+  
+    // Devuelve el mensaje de despedida aleatorio correspondiente al índice generado
+    return goodbyeMessages[randomIndex];
+  }
+  
+
+
+
+
+  module.exports={saludoControlGastos, generateGoodbyeMessage}

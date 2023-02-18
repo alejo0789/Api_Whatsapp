@@ -35,6 +35,25 @@ return data
 
 
 }
+
+
+function  messagebye(number){
+    const despedida=personalmessages.generateGoodbyeMessage();
+        const data = JSON.stringify(
+            {
+                "messaging_product": "whatsapp",    
+                "to": number,
+                "type": "text",
+                "text": {
+                    
+                    "body": saludo
+                }
+            }
+        )
+    return data
+    
+    
+    }
 /*
 function messageList(number){
 
@@ -140,5 +159,6 @@ return data
 module.exports ={
     messageText, 
     messageList,
+    messagebye,
    
     messageTextUrl}
