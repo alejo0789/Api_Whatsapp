@@ -1,3 +1,5 @@
+const personalmessages= require("../shared/personalmessages")
+
 function messageText(textresponse, number){
 
     const data = JSON.stringify(
@@ -16,6 +18,43 @@ return data
 
 }
 
+function  messageList(number){
+const saludo=personalmessages.saludoControlGastos();
+    const data = JSON.stringify(
+        {
+            "messaging_product": "whatsapp",    
+            "to": number,
+            "type": "text",
+            "text": {
+                
+                "body": saludo
+            }
+        }
+    )
+return data
+
+
+}
+
+
+function  messagebye(number){
+    const despedida=personalmessages.generateGoodbyeMessage();
+        const data = JSON.stringify(
+            {
+                "messaging_product": "whatsapp",    
+                "to": number,
+                "type": "text",
+                "text": {
+                    
+                    "body": despedida
+                }
+            }
+        )
+    return data
+    
+    
+    }
+/*
 function messageList(number){
 
     const data = JSON.stringify(
@@ -98,7 +137,7 @@ return data
 
 }
 
-
+*/
 function messageTextUrl( number, url){
 
     const data = JSON.stringify(
@@ -120,5 +159,6 @@ return data
 module.exports ={
     messageText, 
     messageList,
+    messagebye,
    
     messageTextUrl}
