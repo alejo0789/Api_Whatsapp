@@ -1,5 +1,6 @@
 const whatsappModel= require("../shared/whatsappmodels")
 const whatsappservice= require("../services/whatsappservice")
+const flaskservice= require("../services/flask_service")
 //const openaiservice=require("../services/opeaiservice")
 const fs = require("fs");
 const { spawn } = require('child_process');
@@ -25,25 +26,16 @@ async function processMessage(text, number){
    //  openaiservice.completeText('once upon time')
      // .then((completedtext) => {
       //  var model =whatsappModel.messageText(completedtext, number)
-    whatsappservice.sendMessageWhatsapp(model)
-    my_console.log(model)
-    console.log(text);
-    my_console.log('entra gpt2'+completedtext)
+    //whatsappservice.sendMessageWhatsapp(model)
+    flaskservice.sendMessageflask(text, number)
+    //my_console.log(model)
+    //console.log(text);
+    //my_console.log('entra gpt2'+completedtext)
      }
     
 
 
-    // my_console.log('entra gpt4')
-     /*var model =whatsappModel.messageText(text, number)
-     //models.push(model)
-        var model =whatsappModel.messageTextUrl(number)
-        models.push(model)
-        var model =whatsappModel.messageText("avisame cuando acabes de entrenar", number)
-     
-        models.push(model)
-      
-      
-    */
+
 
 
     else if(text.includes("adios")){
