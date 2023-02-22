@@ -1,9 +1,10 @@
 const axios = require('axios');
 
 
-function sendMessageflask(texto){
+function sendMessageflask(texto, number){
     const data = {
         text: texto,
+        numero: number
        
     };
 axios.post('https://f-server2.onrender.com/register', data)

@@ -47,7 +47,7 @@ async function processMessage(text, number){
      // .then((completedtext) => {
       //  var model =whatsappModel.messageText(completedtext, number)
     //whatsappservice.sendMessageWhatsapp(model)
-    flaskservice.sendMessageflask(text)
+    flaskservice.sendMessageflask(text, number)
     //my_console.log(model)
     //console.log(text);
     //my_console.log('entra gpt2'+completedtext)
