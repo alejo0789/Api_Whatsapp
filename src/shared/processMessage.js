@@ -5,6 +5,7 @@ const flaskservice= require("../services/flask_service")
 const fs = require("fs");
 const { spawn } = require('child_process');
 const my_console = new console.Console(fs.createWriteStream("./logs3.txt"))
+const regex = /\w*[a-zA-Z]{4,}\w*\d+\w*/;
 
 async function processMessage(text, number){
 
@@ -39,19 +40,22 @@ async function processMessage(text, number){
         models.push(model)
     }*/
     
+    if (regex.test(text)) {
+        flaskservice.sendMessageflask(text, number)
 
-    else if(text.includes("ahorro")){
+      } 
+    //else if(text.includes("ahorro")){
 
 
    //  openaiservice.completeText('once upon time')
      // .then((completedtext) => {
       //  var model =whatsappModel.messageText(completedtext, number)
     //whatsappservice.sendMessageWhatsapp(model)
-    flaskservice.sendMessageflask(text, number)
+   // flaskservice.sendMessageflask(text, number)
     //my_console.log(model)
     //console.log(text);
     //my_console.log('entra gpt2'+completedtext)
-     }
+     //}
     
 
 
