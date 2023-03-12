@@ -35,7 +35,23 @@ return data
 
 
 }
+function  messageSaveit(number){
+    const messagge_saved=personalmessages.generatesaveinformation();
+        const data = JSON.stringify(
+            {
+                "messaging_product": "whatsapp",    
+                "to": number,
+                "type": "text",
+                "text": {
+                    
+                    "body": messagge_saved
+                }
+            }
+        )
+    return data
 
+    
+}
 
 function  messagebye(number){
     const despedida=personalmessages.generateGoodbyeMessage();
@@ -161,4 +177,6 @@ module.exports ={
     messageList,
     messagebye,
    
-    messageTextUrl}
+    messageTextUrl,
+     messageSaveit
+}
