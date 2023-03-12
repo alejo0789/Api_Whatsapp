@@ -5,7 +5,7 @@ const flaskservice= require("../services/flask_service")
 const fs = require("fs");
 const { spawn } = require('child_process');
 const my_console = new console.Console(fs.createWriteStream("./logs3.txt"))
-const regex = /\w*[a-zA-Z]{4,}\w*\d+\w*/;
+const regex = /^(?=.*\d)[a-zA-Z0-9\s]{4,}$/;
 
 async function processMessage(text, number){
 
@@ -40,10 +40,15 @@ async function processMessage(text, number){
         models.push(model)
     }*/
     
-    if (regex.test(text)) {
-        flaskservice.sendMessageflask(text, number)
+  else if (regex.test(text)) {
+      console.log(text)
+      flaskservice.sendMessageflask(text, number)
+      var model =whatsappModel.messageSaveit(number)
+      whatsappservice.sendMessageWhatsapp(model)
+        
+      
 
-      } 
+    } 
     //else if(text.includes("ahorro")){
 
 
