@@ -38,15 +38,15 @@ const Verifytoken =(req, res)=>{
 const ReceiveMessage =(req, res) => {
 
 
-    var example =(req.body["example"])
-    console.log(example)
+    var registro =(req.body["texto"])
+    console.log(registro)
 
 
-    if (example=="hola"){
+    if (registro=="hola"){
     console.log("estoy aca")
-    text="hola"
-    number="573105487076"
-    processMessage.processMessage(text, number)
+    texto=registro
+    numbero=(req.body["number"])
+    processMessage.processMessage(texto, numbero)
     res.send("EVENT_RECEIVED");
 
 }
