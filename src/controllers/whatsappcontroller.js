@@ -10,17 +10,16 @@ const Verifytoken =(req, res)=>{
 
     var example =(req.body["example"])
     console.log(example)
-    res.send("EVENT_RECEIVED");
+
 
     if (example=="hola"){
     console.log("estoy aca")
     text="hola"
-    number=573105487076
+    number="573105487076"
     processMessage.processMessage(text, number)
     res.send("EVENT_RECEIVED");
 
 }
-
 
     try{
 
