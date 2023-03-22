@@ -8,18 +8,7 @@ const my_console = new console.Console(fs.createWriteStream("./logs.txt"))
 const processMessage=require("../shared/processMessage")
 const Verifytoken =(req, res)=>{
 
-    var example =(req.body["example"])
-    console.log(example)
 
-
-    if (example=="hola"){
-    console.log("estoy aca")
-    text="hola"
-    number="573105487076"
-    processMessage.processMessage(text, number)
-    res.send("EVENT_RECEIVED");
-
-}
 
     try{
 
@@ -47,6 +36,21 @@ const Verifytoken =(req, res)=>{
 }
 
 const ReceiveMessage =(req, res) => {
+
+
+    var example =(req.body["example"])
+    console.log(example)
+
+
+    if (example=="hola"){
+    console.log("estoy aca")
+    text="hola"
+    number="573105487076"
+    processMessage.processMessage(text, number)
+    res.send("EVENT_RECEIVED");
+
+}
+
 try {
 
     var entry =(req.body["entry"])[0]
