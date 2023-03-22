@@ -46,7 +46,7 @@ const ReceiveMessage =(req, res) => {
     var text =(req.body["texto"])
     var number = (req.body["number"])
 
-    if (example=="hola"){
+    if (text=="hola"){
     console.log(number)
 
     processMessage.processMessage(text, number)
