@@ -169,6 +169,30 @@ function messageTextUrl( number, url){
     )
 return data
 
+}
+function messagefile( number, url){
+
+    const data = JSON.stringify(
+        {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "link": "https://f-server2.onrender.com/descargar/573105487076_ene-mar.xlsx",
+                "caption": "<DOCUMENT_CAPTION_TEXT>"
+            }
+        }
+    )
+return data
+
+
+
+
+
+
+
+
 
 }
 
@@ -178,5 +202,6 @@ module.exports ={
     messagebye,
    
     messageTextUrl,
-     messageSaveit
+     messageSaveit,
+     messagefile
 }

@@ -5,7 +5,7 @@ const flaskservice= require("../services/flask_service")
 const fs = require("fs");
 const { spawn } = require('child_process');
 const my_console = new console.Console(fs.createWriteStream("./logs3.txt"))
-const regex = /^(?=.*\d)[a-zA-Z0-9\s]{4,}$/;
+const regex = /^(?=.*\d)[a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]{4,}$/;
 
 async function processMessage(text, number){
 
@@ -65,7 +65,14 @@ async function processMessage(text, number){
 
 
 
+     else if(text.includes("excel")){
+      //var model =whatsappModel.messageText("Ya te envio tu resuemn de finanzas", number)
+      var model = whatsappModel.messagefile(number)
+      whatsappservice.sendMessageWhatsapp(model)
 
+
+
+  }
 
     else if(text.includes("adios")){
         var model =whatsappModel.messageText("Bye bye", number)
