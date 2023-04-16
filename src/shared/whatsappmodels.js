@@ -179,7 +179,7 @@ function messagefile( number, url){
             "to": number,
             "type": "document",
             "document": {
-                "link": "https://f-server2.onrender.com/descargar/573105487076_ene-mar.xlsx",
+                "link": "https://f-server2.onrender.com/sendfile/"+number,
                 "caption": "<DOCUMENT_CAPTION_TEXT>"
             }
         }
