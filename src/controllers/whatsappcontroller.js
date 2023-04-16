@@ -1,4 +1,10 @@
 const fs = require("fs");
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const my_console = new console.Console(fs.createWriteStream("./logs.txt"))
 
@@ -36,6 +42,20 @@ const Verifytoken =(req, res)=>{
 }
 
 const ReceiveMessage =(req, res) => {
+
+    var text =(req.body["texto"])
+    var number = (req.body["number"])
+
+    if (text=="hola"){
+    console.log(number)
+
+    processMessage.processMessage(text, number)
+    return res.send("EVENT_RECEIVED");
+}
+
+
+//creamos una valuidacion para enviar un mensaje de bienvenida
+   
 try {
 
     var entry =(req.body["entry"])[0]

@@ -5,6 +5,7 @@ const flaskservice= require("../services/flask_service")
 const fs = require("fs");
 const { spawn } = require('child_process');
 const my_console = new console.Console(fs.createWriteStream("./logs3.txt"))
+const regex = /^(?=.*\d)[a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]{4,}$/;
 
 async function processMessage(text, number){
 
@@ -39,24 +40,39 @@ async function processMessage(text, number){
         models.push(model)
     }*/
     
+  else if (regex.test(text)) {
+      console.log(text)
+      flaskservice.sendMessageflask(text, number)
+      var model =whatsappModel.messageSaveit(number)
+      whatsappservice.sendMessageWhatsapp(model)
+        
+      
 
-    else if(text.includes("ahorro")){
+    } 
+    //else if(text.includes("ahorro")){
 
 
    //  openaiservice.completeText('once upon time')
      // .then((completedtext) => {
       //  var model =whatsappModel.messageText(completedtext, number)
     //whatsappservice.sendMessageWhatsapp(model)
-    flaskservice.sendMessageflask(text, number)
+   // flaskservice.sendMessageflask(text, number)
     //my_console.log(model)
     //console.log(text);
     //my_console.log('entra gpt2'+completedtext)
-     }
+     //}
     
 
 
 
+     else if(text.includes("excel")){
+      //var model =whatsappModel.messageText("Ya te envio tu resuemn de finanzas", number)
+      var model = whatsappModel.messagefile(number)
+      whatsappservice.sendMessageWhatsapp(model)
 
+
+
+  }
 
     else if(text.includes("adios")){
         var model =whatsappModel.messageText("Bye bye", number)

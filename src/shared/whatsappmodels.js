@@ -35,7 +35,23 @@ return data
 
 
 }
+function  messageSaveit(number){
+    const messagge_saved=personalmessages.generatesaveinformation();
+        const data = JSON.stringify(
+            {
+                "messaging_product": "whatsapp",    
+                "to": number,
+                "type": "text",
+                "text": {
+                    
+                    "body": messagge_saved
+                }
+            }
+        )
+    return data
 
+    
+}
 
 function  messagebye(number){
     const despedida=personalmessages.generateGoodbyeMessage();
@@ -153,6 +169,30 @@ function messageTextUrl( number, url){
     )
 return data
 
+}
+function messagefile( number, url){
+
+    const data = JSON.stringify(
+        {
+            "messaging_product": "whatsapp",
+            "recipient_type": "individual",
+            "to": number,
+            "type": "document",
+            "document": {
+                "link": "https://f-server2.onrender.com/descargar/573105487076_ene-mar.xlsx",
+                "caption": "<DOCUMENT_CAPTION_TEXT>"
+            }
+        }
+    )
+return data
+
+
+
+
+
+
+
+
 
 }
 
@@ -161,4 +201,7 @@ module.exports ={
     messageList,
     messagebye,
    
-    messageTextUrl}
+    messageTextUrl,
+     messageSaveit,
+     messagefile
+}
