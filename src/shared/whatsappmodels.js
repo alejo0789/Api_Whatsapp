@@ -180,7 +180,7 @@ function messagefile( number, url){
             "type": "document",
             "document": {
                 "link": "https://f-server2.onrender.com/sendfile/"+number,
-                "caption": "<DOCUMENT_CAPTION_TEXT>"
+                "caption": "Tus finanzas"
             }
         }
     )
