@@ -7,7 +7,7 @@ async function sendMessageWhatsapp(data) {
     return new Promise((resolve, reject) => {
       const options = {
         host: "graph.facebook.com",
-        path: "/v15.0/103232192593050/messages",
+        path: "/v15.0/166705213185268/messages",
         method: "POST",
         body: data,
         headers: {
