@@ -42,12 +42,13 @@ function messageRegister( number){
         {
             "messaging_product": "whatsapp",    
             "to": number,
-            "type": "text",
-            "text": {
-                "preview_url": true,
-                 "body": "https://wp-api-render.onrender.com/images/bienvenida.jpg "
-            }
-        }
+            "type": "template",
+            "template": {
+                "name": "bienvenida",
+                "language": {
+                    "code": "language-and-locale-code"
+                },
+            } }
     )
 return data
 }
