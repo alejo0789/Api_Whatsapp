@@ -16,7 +16,7 @@ app.use("/public",express.static(__dirname + "/images", (err) => {
 app.use("/images", express.static(__dirname + "/images"));
 console.log(__dirname)
 //pruebas
-const directoryPath = path.join(__dirname, 'images');
+const directoryPath = path.join('/opt/render/project/src/images');
 //passsing directoryPath and callback function
 fs.readdir(directoryPath, function (err, files) {
     //handling error
