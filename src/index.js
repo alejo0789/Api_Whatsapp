@@ -6,23 +6,13 @@ const app = express();
 const PORT=process.env.PORT || 3000;
 
 app.use(express.json())
-app.use(express.static('src/public', (err) => {
+app.use("/public",express.static(__dirname + "/images", (err) => {
     if (err) {
       console.error('Error serving static files:', err);
     }
   }));
-  app.use(express.static('./src/public', (err) => {
-    if (err) {
-      console.error('Error serving static files:', err);
-    }
-  }));
-  app.use(express.static('src/images', (err) => {
-    if (err) {
-      console.error('Error serving static files:', err);
-    }
-  }));
-app.use('/images/', express.static('../../src/images'));
-app.use("/images", express.static(__dirname + "../images"));
+  
+app.use("/images", express.static(__dirname + "/images"));
 console.log(__dirname)
 app.use("/whatsapp", apiRouter)
 
