@@ -46,8 +46,25 @@ function messageRegister( number){
             "template": {
                 "name": "bienvenida",
                 "language": {
-                    "code": "es-Es"
+                    "code": "es"
                 },
+                "components": [
+                    {
+                        "type": "header",
+                        "parameters": [
+                            {
+                                "type": "image",
+                                "image": {
+                                    "link": "https://wp-api-render.onrender.com/public/bienvenida.jpg"
+                                }
+                            }
+                        ]
+                    }
+                ]
+
+
+
+                
             } }
     )
 return data

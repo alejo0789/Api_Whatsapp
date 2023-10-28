@@ -22,7 +22,7 @@ async function processMessage(text, number){
       whatsappservice.sendMessageWhatsapp(model)
        // models.push(model)
     }
-   else if (text.includes("registro")) {
+   else if (text.includes("registro_inicial")) {
       var model =whatsappModel.messageRegister(number)
       
       whatsappservice.sendMessageWhatsapp(model)
