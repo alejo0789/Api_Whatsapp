@@ -45,7 +45,7 @@ function messageRegister( number){
             "type": "text",
             "text": {
                 "preview_url": true,
-                 "body": " "
+                 "body": "https://wp-api-render.onrender.com/images/bienvenida.jpg "
             }
         }
     )
