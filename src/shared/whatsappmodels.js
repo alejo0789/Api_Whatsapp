@@ -45,7 +45,7 @@ function messageRegister( number){
             "type": "text",
             "text": {
                 "preview_url": true,
-                 "body": "  https://www.youtube.com/watch?v=oCGS6iBIfL8  "
+                 "body": " "
             }
         }
     )
@@ -217,6 +217,7 @@ return data
 
 module.exports ={
     messageText, 
+    messageRegister, 
     messageList,
     messagebye,
    
