@@ -1,7 +1,6 @@
 {
   "name": "api-whatsapp",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js",
@@ -19,5 +18,7 @@
   },
   "engines": {
     "node": ">=16.0.0"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }

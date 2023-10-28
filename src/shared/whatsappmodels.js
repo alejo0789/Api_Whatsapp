@@ -35,6 +35,25 @@ return data
 
 
 }
+
+function messageRegister( number){
+
+    const data = JSON.stringify(
+        {
+            "messaging_product": "whatsapp",    
+            "to": number,
+            "type": "text",
+            "text": {
+                "preview_url": true,
+                 "body": "  https://www.youtube.com/watch?v=oCGS6iBIfL8  "
+            }
+        }
+    )
+return data
+}
+
+
+
 function  messageSaveit(number){
     const messagge_saved=personalmessages.generatesaveinformation();
         const data = JSON.stringify(
