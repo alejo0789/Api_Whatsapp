@@ -35,6 +35,26 @@ return data
 
 
 }
+
+function messageRegister( number){
+
+    const data = JSON.stringify(
+        {
+            "messaging_product": "whatsapp",    
+            "to": number,
+            "type": "template",
+            "template": {
+                "name": "bienvenida",
+                "language": {
+                    "code": "es-Es"
+                },
+            } }
+    )
+return data
+}
+
+
+
 function  messageSaveit(number){
     const messagge_saved=personalmessages.generatesaveinformation();
         const data = JSON.stringify(
@@ -198,6 +218,7 @@ return data
 
 module.exports ={
     messageText, 
+    messageRegister, 
     messageList,
     messagebye,
    
