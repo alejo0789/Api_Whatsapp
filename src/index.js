@@ -21,8 +21,8 @@ app.use(express.static('src/public', (err) => {
       console.error('Error serving static files:', err);
     }
   }));
-app.use('/images', express.static('src/images'));
-app.use("/", express.static(__dirname + "../images"));
+app.use('/images/', express.static('../../src/images'));
+app.use("/images", express.static(__dirname + "../images"));
 console.log(__dirname)
 app.use("/whatsapp", apiRouter)
 
