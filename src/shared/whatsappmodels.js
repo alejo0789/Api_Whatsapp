@@ -46,7 +46,7 @@ function messageRegister( number){
             "template": {
                 "name": "bienvenida",
                 "language": {
-                    "code": "language-and-locale-code"
+                    "code": "es-Es"
                 },
             } }
     )
