@@ -10,9 +10,9 @@ const regex = /^(?=.*\d)[a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]{4,}$/;
 async function processMessage(text, number){
 
     text=text.toLowerCase()
-
+    console.log(text)
     var models=[]
-    my_console.log('entra gpt 1'+text)
+ 
 
     const saludos = ["hola", "buenos días", "buenas tardes", "buenas noches", "hey", "¿cómo estás?", "qué tal", "saludos", "hi"];
     const despedidas = ["adiós","adiós", "hasta luego", "hasta pronto", "nos vemos", "chao", "ciao", "bye", "que tengas un buen día"];
@@ -23,6 +23,7 @@ async function processMessage(text, number){
        // models.push(model)
     }
    else if (text.includes("registro_inicial")) {
+    
       var model =whatsappModel.messageRegister(number)
       
       whatsappservice.sendMessageWhatsapp(model)

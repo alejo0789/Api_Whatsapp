@@ -47,11 +47,17 @@ const ReceiveMessage =(req, res) => {
     var number = (req.body["number"])
 
     if (text=="hola"){
-    console.log(number)
+    
 
     processMessage.processMessage(text, number)
     return res.send("EVENT_RECEIVED");
 }
+if (text =="registro_inicial"){
+   
+    processMessage.processMessage(text, number)
+    return res.send("EVENT_RECEIVED");
+ 
+   }
 
 
 //creamos una valuidacion para enviar un mensaje de bienvenida

@@ -28,6 +28,7 @@ async function sendMessageWhatsapp(data) {
   
       req.on("error", (error) => {
         console.error(error);
+        console.log(error)
         reject(error);
       });
   
