@@ -44,7 +44,7 @@ function messageRegister( number){
             "to": number,
             "type": "template",
             "template": {
-                "name": "bienvenida",
+                "name": "bienvenida_registro",
                 "language": {
                     "code": "es"
                 },
@@ -55,7 +55,7 @@ function messageRegister( number){
                             {
                                 "type": "image",
                                 "image": {
-                                    "link": "https://wp-api-render.onrender.com/public/bienvenida.jpg"
+                                    "link": "https://wp-api-render.onrender.com/public/bienvenida2.jpg"
                                 }
                             }
                         ]
