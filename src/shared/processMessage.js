@@ -48,7 +48,7 @@ async function processMessage(text, number){
     }*/
     
   else if (regex.test(text)) {
-      console.log(text)
+      
       flaskservice.sendMessageflask(text, number)
       var model =whatsappModel.messageSaveit(number)
       whatsappservice.sendMessageWhatsapp(model)

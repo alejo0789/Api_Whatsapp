@@ -1,7 +1,8 @@
 const axios = require('axios');
-var now = new Date();
+
 
 function sendMessageflask(texto, number){
+    var now = new Date();
     const data = {
         text: texto,
         numero: number,
