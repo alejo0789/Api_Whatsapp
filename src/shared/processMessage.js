@@ -5,12 +5,12 @@ const flaskservice= require("../services/flask_service")
 const fs = require("fs");
 const { spawn } = require('child_process');
 const my_console = new console.Console(fs.createWriteStream("./logs3.txt"))
-const regex = /^(?=.*\d)[a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]{4,}$/;
+const regex = /^(?=.*\d)[\d.,a-zA-Z0-9áéíóúÁÉÍÓÚüÜñÑ\s]{4,}$/;
 
 async function processMessage(text, number){
 
     text=text.toLowerCase()
-    console.log(text)
+    
     var models=[]
  
 
