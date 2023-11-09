@@ -32,7 +32,7 @@ async function processMessage(text, number){
     }
     else if (text.includes("video_inicial")) {
     
-
+      
       var model_video= whatsappModel.messageVideo(number)
     
       whatsappservice.sendMessageWhatsapp(model_video)
