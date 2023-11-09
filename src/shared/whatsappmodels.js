@@ -87,7 +87,7 @@ function messageVideo( number){
                         "parameters": [
                             {
                                 "type": "video",
-                                "image": {
+                                "video": {
                                     "link": "https://wp-api-render.onrender.com/images/video_pin.mp4"
                                 }
                             }
