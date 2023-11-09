@@ -69,6 +69,39 @@ function messageRegister( number){
     )
 return data
 }
+function messageVideo( number){
+
+    const data = JSON.stringify(
+        {
+            "messaging_product": "whatsapp",    
+            "to": number,
+            "type": "template",
+            "template": {
+                "name": "video",
+                "language": {
+                    "code": "es"
+                },
+                "components": [
+                    {
+                        "type": "header",
+                        "parameters": [
+                            {
+                                "type": "video",
+                                "image": {
+                                    "link": "https://wp-api-render.onrender.com/images/video_pin.mp4"
+                                }
+                            }
+                        ]
+                    }
+                ]
+
+
+
+                
+            } }
+    )
+return data
+}
 
 
 
@@ -236,6 +269,7 @@ return data
 module.exports ={
     messageText, 
     messageRegister, 
+    messageVideo,
     messageList,
     messagebye,
    

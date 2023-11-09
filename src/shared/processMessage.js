@@ -25,8 +25,9 @@ async function processMessage(text, number){
    else if (text.includes("registro_inicial")) {
     
       var model =whatsappModel.messageRegister(number)
-      
+      var model_video= whatsappModel.messageVideo(number)
       whatsappservice.sendMessageWhatsapp(model)
+      whatsappservice.sendMessageWhatsapp(model_video)
        // models.push(model)
     }
 
