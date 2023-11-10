@@ -58,7 +58,12 @@ if (text =="registro_inicial"){
     return res.send("EVENT_RECEIVED");
  
    }
-
+   else if (text =="video_inicial"){
+   
+    processMessage.processMessage(text, number)
+    return res.send("EVENT_RECEIVED");
+ 
+   }
 
 //creamos una valuidacion para enviar un mensaje de bienvenida
    

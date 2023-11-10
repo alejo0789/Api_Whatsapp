@@ -28,13 +28,14 @@ async function processMessage(text, number){
       var model_video= whatsappModel.messageVideo(number)
       whatsappservice.sendMessageWhatsapp(model)
       whatsappservice.sendMessageWhatsapp(model_video)
+   
        // models.push(model)
     }
-    else if (text.includes("video_inicial")) {
+  else if (text.includes("video_inicial")) {
     
-      
+  
       var model_video= whatsappModel.messageVideo(number)
-    
+  
       whatsappservice.sendMessageWhatsapp(model_video)
        // models.push(model)
     }
