@@ -177,7 +177,7 @@ return data
 }
 
 function  messageLinkExcel(number){
-    const link="www.fiwapi.com";
+    const link="para ver tu estado financiero y todos tus gastos solo ingresa a www.fiwapi.com";
         const data = JSON.stringify(
             {
                 "messaging_product": "whatsapp",    
