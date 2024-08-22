@@ -16,6 +16,8 @@ async function processMessage(text, number){
 
     const saludos = ["hola", "buenos días", "buenas tardes", "buenas noches", "hey", "¿cómo estás?", "qué tal", "saludos", "hi"];
     const despedidas = ["adiós","adiós", "hasta luego", "hasta pronto", "nos vemos", "chao", "ciao", "bye", "que tengas un buen día"];
+    const consulta_excel = ["excel", "exel", "balance", "estado"];
+    
     if (saludos.some(saludo => text.includes(saludo))) {
       var model =whatsappModel.messageList(number)
       
@@ -47,7 +49,16 @@ async function processMessage(text, number){
       whatsappservice.sendMessageWhatsapp(model)
      // models.push(model)
   }
+
+  else if (consulta_excel.some(consulta => text.includes(consulta)))  {
     
+  
+    var model_excel= whatsappModel.messageLinkExcel(number)
+
+   // whatsappservice.sendMessageWhatsapp(model_excel)
+    models.push(model_excel)
+  }
+
     
     
     /*if(text.includes("hola")){
@@ -80,7 +91,7 @@ async function processMessage(text, number){
      //}
     
 
-
+/*
 
      else if(text.includes("excel")){
       //var model =whatsappModel.messageText("Ya te envio tu resuemn de finanzas", number)
@@ -89,7 +100,7 @@ async function processMessage(text, number){
 
 
 
-  }
+  }*/
 
     else if(text.includes("adios")){
         var model =whatsappModel.messageText("Bye bye", number)

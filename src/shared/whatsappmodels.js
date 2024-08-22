@@ -140,90 +140,8 @@ function  messagebye(number){
     
     
     }
-/*
-function messageList(number){
-
-    const data = JSON.stringify(
-        {
-            "messaging_product": "whatsapp",
-            "recipient_type": "individual",
-            "to": number,
-            "type": "interactive",
-            "interactive": {
-                "type": "list",
-                "header": {
-                    "type": "text",
-                    "text": "Hola, soy verne tu guia de viajes"
-                },
-                "body": {
-                    "text": "Estoy aca para guiarte y mostrarte de manera personalizada los mejores ejercicios para ti"
-                },
-                "footer": {
-                    "text": "Que deseas entrenar hoy ?"
-                },
-                "action": {
-                    "button": "opciones",
-                    "sections": [
-                        {
-                            "title": "Parte superior",
-                            "rows": [
-                                {
-                                    "id": "001",
-                                    "title": "Pectoral / Pecho ",
-                                    
-                                },
-                                {
-                                    "id": "002",
-                                    "title": "Espalda",
-                                   
-                                },
-
-                                {
-                                    "id": "003",
-                                    "title": "Hombros",
-                                   
-                                },
-
-                                {
-                                    "id": "004",
-                                    "title": "Biceps",
-                                   
-                                },
-
-                                {
-                                    "id": "005",
-                                    "title": "Triceps",
-                                   
-                                },
-
-                            ]
-                        },
-                        {
-                            "title": "Parte inferior",
-                            "rows": [
-                                {
-                                    "id": "006",
-                                    "title": "Pierna",
-                                    
-                                },
-                                {
-                                    "id": "07",
-                                    "title": "Gluteos",
-                                    
-                                }
-                            ]
-                        }
-                    ]
-                }
-            }
-        }
-    )
-return data
 
 
-}
-
-*/
 function messageTextUrl( number, url){
 
     const data = JSON.stringify(
@@ -256,15 +174,31 @@ function messagefile( number, url){
     )
 return data
 
-
-
-
-
-
-
-
-
 }
+
+function  messageLinkExcel(number){
+    const link="www.fiwapi.com";
+        const data = JSON.stringify(
+            {
+                "messaging_product": "whatsapp",    
+                "to": number,
+                "type": "text",
+                "text": {
+                    
+                    "body": link
+                }
+            }
+        )
+    return data
+    
+    
+    }
+
+
+
+
+
+
 
 module.exports ={
     messageText, 
@@ -272,7 +206,7 @@ module.exports ={
     messageVideo,
     messageList,
     messagebye,
-   
+    messageLinkExcel,
     messageTextUrl,
      messageSaveit,
      messagefile
